@@ -1,0 +1,45 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", monospace;
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: #fff;
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff00dd;
+  text-shadow: 0 0 8px rgba(255, 0, 170, 0.979);
+}
+
+/* Relógio */
+#relogio {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: #0a0a0a;
+  color: #ff00dd;
+  letter-spacing: 4px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 170, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de brilho pulsante */
+#relogio:hover {
+  box-shadow: 0 0 35px rgba(255, 0, 191, 0.9);
+  transform: scale(1.05);
+}
