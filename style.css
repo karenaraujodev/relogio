@@ -6,40 +6,60 @@
 }
 
 body {
-  height: 100vh;
+  font-family: "Courier New", monospace;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  /* Centraliza verticalmente */
   align-items: center;
-  font-family: "Courier New", monospace;
-  background: linear-gradient(135deg, #1e1e2f, #121212);
-  color: #fff;
+  height: 100vh;
 }
 
 /* Título */
 h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #ff00dd;
-  text-shadow: 0 0 8px rgba(255, 0, 170, 0.979);
+  text-align: center;
+  font-size: 3em;
+  margin: 30px 0 10px 0;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 0, 170, 0.7);
 }
 
 /* Relógio */
 #relogio {
-  font-size: 4rem;
+  font-size: 4em;
   font-weight: bold;
-  padding: 20px 40px;
-  border-radius: 12px;
-  background: #0a0a0a;
-  color: #ff00dd;
-  letter-spacing: 4px;
+  padding: 20px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(255, 0, 170, 0.979);
   text-align: center;
-  box-shadow: 0 0 20px rgba(255, 0, 170, 0.4);
-  transition: all 0.3s ease-in-out;
+
+  /* Animação neon */
+  animation: pulse 2s infinite alternate;
 }
 
-/* Efeito de brilho pulsante */
-#relogio:hover {
-  box-shadow: 0 0 35px rgba(255, 0, 191, 0.9);
-  transform: scale(1.05);
+@keyframes pulse {
+  0% { text-shadow: 0 0 8px rgba(255, 0, 170, 0.9); }
+  100% { text-shadow: 0 0 16px rgba(255, 0, 170, 1); }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  #relogio {
+    font-size: 2em; /* menor do que antes */
+  }
+}
+
+@media (max-width: 400px) {
+  #relogio {
+    font-size: 1.6em; /* ainda menor em celulares muito pequenos */
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
 }
